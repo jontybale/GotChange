@@ -28,16 +28,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->_resourceLoader->addResourceType('filter', 'filters', 'Filter')
                               ->addResourceType('validate', 'validators', 'Validate');
     }
-
-    /**
-     * load config information in to registry
-     */
-    protected function _initRegistry()
-    {
-        // load basic system settings
-        Zend_Registry::set('tmpdir', $this->_options['default']['system']['tmpdir']);
-        Zend_Registry::set('salt', $this->_options['default']['system']['salt']);
-    }
     
     /**
      * prepare logging
