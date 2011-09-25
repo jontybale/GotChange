@@ -1,0 +1,151 @@
+/* 
+    Document   : global
+    Created on : 25-Sep-2011, 22:12:10
+    Author     : jontybale
+    Description:
+        Basic stylesheet for GotChange
+*/
+
+/* RESET
+ ******************************************************************************/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+    display:block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* GLOBAL
+ ******************************************************************************/
+
+body {
+    font-family: verdana,helvetica,arial,sans-serif;
+    font-size: 90%;
+    color: #222;
+    background: #ccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #111;
+}
+h1 { font-size: 2em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 1.5em; margin-bottom: 0.75em; }
+h3 { font-size: 1.2em; line-height: 1; margin-bottom: 1em; }
+
+pre {
+    margin: 1.5em 0;
+    font-family: 'andale mono','lucida console',monospace;
+    white-space: pre;
+}
+
+/* SUCCESS, ERROR & NOTICE BOXES
+ ******************************************************************************/
+
+.error,
+.notice,
+.success    { padding: .8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error      { background: #FBE3E4; color: #8a1f11; border-color: #FBC2C4; }
+.notice     { background: #FFF6BF; color: #514721; border-color: #FFD324; }
+.success    { background: #E6EFC2; color: #264409; border-color: #C6D880; }
+.error a    { color: #8a1f11; }
+.notice a   { color: #514721; }
+.success a  { color: #264409; }
+
+/* STYLING
+ ******************************************************************************/
+
+.gotchange {
+    
+}
+.gotchange-header { background: #fff; padding: 20px; }
+.gotchange-header p { color: #666; font-style: italic; }
+
+.gotchange-form { padding-top: 10px; }
+.gotchange-form .row {
+    position: relative;
+    padding: 0 20px;
+}
+.gotchange-form .cell { margin: 10px 0; }
+.gotchange-form .label,
+.gotchange-form .description,
+.gotchange-form .button {
+    display: block;
+    padding: 0; margin: 0; height: 0;
+    text-indent: -999em;
+}
+.gotchange-form input {
+    width: 7em;
+    padding: 8px;
+}
+.gotchange-form button {
+    padding: 6px 4px;
+    margin: 10px 0;
+}
+.gotchange-form input,
+.gotchange-form button {
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.gotchange-form .tooltip {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+.gotchange-form .tooltip.active { display: block; }
+
+.gotchange-result {
+    padding: 10px 20px;
+    display: block;
+}
+
+.gotchange-form ul.errors {
+    margin-top: 10px;
+    padding: 10px;
+    background: #FBE3E4;
+    color: #8a1f11;
+    border: 2px solid #FBC2C4;
+}
+.gotchange-form ul.errors li {
+    margin-left: 20px;
+}
+
+.gotchange-exception {
+    padding: 20px;
+}

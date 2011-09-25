@@ -1,0 +1,38 @@
+<div class="gotchange">
+    <div class="gotchange-header">
+        <h1>Got Change?</h1>
+        <p>Enter a value in UK currency to calculate the coins you need!</p>
+    </div>
+    <?php echo $this->form; ?>
+    <div class="gotchange-result"><?php
+    
+    // do we have a result?
+    if ($this->change != NULL) {
+        
+        // output string
+        $output = '<div class="success">Your change consists of';
+        
+        // render result
+        foreach ($this->change AS $coinValue => $coinQty) {
+            
+            // start wrapper
+            $output .= ' <span class="coinqty"><span class="type">';
+            
+            // are we pounds or pence?
+            if ($coinValue >= 100) {
+                $output .= '&pound;' . round($coinValue/100) . '</span> x <span class="value">' . $coinQty;
+            } else {
+                $output .= $coinValue . 'p</span> x <span class="value">' . $coinQty;
+            }
+            
+            // end wrapper
+            $output .= '</span></span>,';
+            
+        }
+        
+        // tidy and output & echo
+        echo substr($output, 0, -1) . '.</div>';
+    }
+    
+    ?></div>
+</div>

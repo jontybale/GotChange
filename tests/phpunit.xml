@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<phpunit
+    backupGlobals="true"
+    backupStaticAttributes="false"
+    bootstrap="./TestHelper.php"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    forceCoversAnnotation="false"
+    mapTestClassNameToCoveredClassName="false"
+    processIsolation="false"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    syntaxCheck="false"
+    strict="false"
+    verbose="false">
+
+    <testsuite name="GotChange">
+        <directory>./application/controllers</directory>
+        <directory>./application/filters</directory>
+        <directory>./application/forms</directory>
+        <directory>./application/models</directory>
+        <directory>./application/validators</directory>
+    </testsuite>
+    
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../application</directory>
+        </whitelist>
+    </filter>
+    
+    <php>
+        <ini name="memory_limit" value="1024M"/>
+    </php>
+    
+</phpunit>

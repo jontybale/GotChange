@@ -1,0 +1,25 @@
+<?php echo $this->doctype() ?>
+<html lang="en" dir="ltr">
+    <head>
+        <?php
+        // page title
+        echo $this->headTitle("GotChange", 'PREPEND')->setSeparator(' | ');
+
+        // head meta tags
+        echo $this->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
+
+        // import css
+        echo $this->headLink()->appendStylesheet('/css/global.css');
+
+        // now import scripts
+        echo $this->headScript()->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js');
+        ?>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> 
+    </head>
+    <body>
+
+        <?php echo $this->layout()->content; ?>
+
+    </body>
+</html>

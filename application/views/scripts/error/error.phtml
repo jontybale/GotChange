@@ -1,0 +1,20 @@
+<div class="gotchange">
+    <div class="gotchange-header">
+        <h1>An error occurred</h1>
+        <p><?php echo $this->message ?></p>
+    </div>
+    <?php if (isset($this->exception)): ?>
+    <div class="gotchange-exception">
+        <h3>Exception information:</h3>
+        <div class="notice"><b>Message:</b> <?php echo $this->exception->getMessage() ?></div>
+
+        <h3>Stack trace:</h3>
+        <pre><?php echo $this->exception->getTraceAsString() ?></pre>
+
+        <h3>Request Parameters:</h3>
+        <pre><?php echo var_export($this->request->getParams(), true) ?></pre>
+    </div>
+    <?php endif ?>
+    <p style="margin: 0 20px;"><a href="/">Return to the homepage.</a></p>
+</div>
+
