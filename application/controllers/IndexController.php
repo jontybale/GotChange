@@ -22,8 +22,8 @@ class IndexController extends \Zend_Controller_Action
     }
     
     /**
-     * Show and process procesing the input form.  May process normally and
-     * display results or return json upon recipt of an ajax request.
+     * Show and/or process the input form.  May process normally and display
+     * results or return json upon recipt of an ajax request.
      */
     public function indexAction()
     {

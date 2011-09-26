@@ -25,7 +25,7 @@ class GotChange_Filter_UKCurrencyToPence implements \Zend_Filter_Interface
         // cast to string
         $valueString = (string) $value;
         // remove characters other than Â£,p,.,0-9
-        $valueString = preg_replace("/[^Â£0-9\.p]/u", "", $valueString);
+        $valueString = preg_replace("/[^£0-9\.p]/u", "", $valueString);
         // is this a value in pence?
         if (preg_match("/^[0-9]+p?$/u", $valueString)) {
             // remove alpha and cast to float
