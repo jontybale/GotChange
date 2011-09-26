@@ -89,33 +89,16 @@ pre {
 /* STYLING
  ******************************************************************************/
 
-.gotchange {
-    
-}
+/* header */
 .gotchange-header { background: #fff; padding: 20px; }
 .gotchange-header p { color: #666; font-style: italic; }
 
+/* forms */
 .gotchange-form { padding-top: 10px; }
-.gotchange-form .row {
-    position: relative;
-    padding: 0 20px;
-}
+.gotchange-form .row { padding: 0 20px; }
 .gotchange-form .cell { margin: 10px 0; }
-.gotchange-form .label,
-.gotchange-form .description,
-.gotchange-form .button {
-    display: block;
-    padding: 0; margin: 0; height: 0;
-    text-indent: -999em;
-}
-.gotchange-form input {
-    width: 7em;
-    padding: 8px;
-}
-.gotchange-form button {
-    padding: 6px 4px;
-    margin: 10px 0;
-}
+.gotchange-form input { width: 7em; padding: 8px; }
+.gotchange-form button { padding: 6px 4px; margin: 10px 0; }
 .gotchange-form input,
 .gotchange-form button {
     border: 1px solid #bbb;
@@ -123,18 +106,16 @@ pre {
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
 }
-.gotchange-form .tooltip {
-    display: none;
-    position: absolute;
-    right: 0;
-}
-.gotchange-form .tooltip.active { display: block; }
-
-.gotchange-result {
-    padding: 10px 20px;
-    display: block;
+.gotchange-form .label,
+.gotchange-form .description,
+.gotchange-form .button {
+    padding: 0;
+    margin: 0;
+    height: 0;
+    text-indent: -999em;
 }
 
+/* errors */
 .gotchange-form ul.errors {
     margin-top: 10px;
     padding: 10px;
@@ -146,6 +127,13 @@ pre {
     margin-left: 20px;
 }
 
+/* results */
+.gotchange-result {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* error formatting */
 .gotchange-exception {
     padding: 20px;
 }

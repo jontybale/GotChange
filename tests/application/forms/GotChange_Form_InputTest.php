@@ -34,8 +34,8 @@ class GotChange_Form_InputTest extends PHPUnit_Framework_TestCase
         $submit = $this->object->getElement('submitbutton');
         
         // validate our element types
-        $this->assertType('Zend_Form_Element_Text', $change);
-        $this->assertType('Zend_Form_Element_Button', $submit);
+        $this->assertInstanceOf('Zend_Form_Element_Text', $change);
+        $this->assertInstanceOf('Zend_Form_Element_Button', $submit);
     }
     
     /**
@@ -60,7 +60,7 @@ class GotChange_Form_InputTest extends PHPUnit_Framework_TestCase
         $validator = $change->getValidator('GotChange_Validate_UKCurrency');
         
         // assert
-        $this->assertType('GotChange_Validate_UKCurrency', $validator);
+        $this->assertInstanceOf('GotChange_Validate_UKCurrency', $validator);
     }
     
     /**
